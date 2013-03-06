@@ -1,0 +1,96 @@
+@import 'vars.less';
+
+* {
+	font-family: @font-family;
+	font-size: @base;
+}
+
+body {
+	background-color: @color;
+	margin-top: 10px;
+}
+
+h1 {
+	font-size: @base + 10px;
+}
+
+.center {
+	text-align: center;
+}
+
+.left {
+	text-align: left;
+}
+
+.float-right {
+	float: right;
+}
+
+border-bottom {
+	border-bottom: 1px solid darken(@color, 10%); 
+}
+
+.wrapper {
+	background-color: lighten(@color, 20%); 
+}
+
+.navbar {
+	background-color: lighten(@color, 10%); 
+	padding: 5px;
+	border-bottom;
+}
+
+.header {
+	.center;
+	border-bottom;
+	img {
+		margin-top: 15px;
+	}
+}
+
+.post-form {
+	border-bottom;
+	table {
+		margin: 15px auto;
+		th {
+			border: 1px solid darken(@color, 50%);
+			background-color: darken(@color, 10%);
+			padding: 0 5px;
+			.left;
+		}
+	}
+}
+
+.footer {
+	background-color: darken(@color, 40%);
+	color: lighten(@color, 40%);
+	.center;
+	padding: 5px 0;
+	a {
+		color: white;
+		&:hover {
+			color: black;
+		}
+	}
+}
+
+.alert {
+	padding-left: 3px;
+}
+
+.alert-error {
+	background-color: #f2dede;
+	border: 1px darken(spin(#f2dede, -10), 3%) solid;
+	color: #b94a48;
+}
+
+a {
+	color: @link;
+	&:hover {
+		color: @linkhover;
+	}
+}
+
+.clear {
+	clear: both;
+}
