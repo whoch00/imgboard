@@ -6,22 +6,23 @@
 			<td colspan="2" class="alert alert-error">
 				{{ HTML::ul($errors); }}
 			</td>
+		</tr>
 		@endif
 		<tr>
 			<th>{{ Form::label('name', 'Nome:') }}</th>
-			<td>{{ Form::text('name') }}</td>
+			<td>{{ Form::text('name', Input::old('name')) }}</td>
 		</tr>
 		<tr>
 			<th>{{ Form::label('email', 'E-Mail:') }}</th>
-			<td>{{ Form::text('email') }}</td>
+			<td>{{ Form::text('email', Input::old('email')) }}</td>
 		</tr>
 		<tr>
 			<th>{{ Form::label('subject', 'Assunto:') }}</th>
-			<td>{{ Form::text('subject') }} {{ Form::submit('Enviar') }}</td>
+			<td>{{ Form::text('subject', Input::old('subject')) }} {{ Form::submit('Enviar') }}</td>
 		</tr>
 		<tr>
 			<th>{{ Form::label('message', 'Menssagem:') }}</th>
-			<td>{{ Form::textarea('message', '', array('rows' => 5, 'cols' => 50)) }}</td>
+			<td>{{ Form::textarea('message', Input::old('message'), array('rows' => 5, 'cols' => 50)) }}</td>
 		</tr>
 		<tr>
 			<th>{{ Form::label('file', 'Arquivo:') }}</th>
@@ -29,7 +30,7 @@
 		</tr>
 		<tr>
 			<th>{{ Form::label('password', 'Senha:') }}</th>
-			<td>{{ Form::password('password') }}</td>
+			<td>{{ Form::password('password', Input::old('password')) }}</td>
 		</tr>
 	</table>
 	{{ Form::hidden('board_id', 1) }}

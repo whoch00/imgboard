@@ -38,6 +38,7 @@ return array(
 	'docs' => array('handles' => 'docs'),
 	'recaptcha' => array('auto' => true),
 	'laraveless' => array('auto' => true),
-	'anbu' => array('auto' => true)
+	'anbu' => array('auto' => true),
+	'resizer' => array('auto' => true)
 
 );

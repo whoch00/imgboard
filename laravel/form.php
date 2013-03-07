@@ -241,9 +241,9 @@ class Form {
 	 * @param  array   $attributes
 	 * @return string
 	 */
-	public static function password($name, $attributes = array())
+	public static function password($name, $value = null, $attributes = array())
 	{
-		return static::input('password', $name, null, $attributes);
+		return static::input('password', $name, $value, $attributes);
 	}
 
 	/**

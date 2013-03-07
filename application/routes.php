@@ -29,6 +29,10 @@ Route::post('manage/login', array(
 	'uses' => 'manage@login'
 ));
 
+Route::get('/(:any)', function($board) {
+	return Redirect::to_route('board', array($board));
+});
+
 /* admin routes */
 
 Route::group(array('before' => 'auth'), function() {

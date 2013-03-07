@@ -1,6 +1,6 @@
 <?php
 
-class Board extends Eloquent { 
+class Post extends Eloquent { 
 
 	public static $table = 'posts';
 
